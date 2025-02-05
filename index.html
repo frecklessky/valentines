@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <link rel = "stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class = "gif_container">
+            <img src = "https://i.pinimg.com/originals/c9/9c/51/c99c51fb08fde666e802e4f4be3eff5f.gif" alt="Cute animated illustration">
+        </div>
+        <div class = "container">
+            <h1 class = "header_text">do YOUUU wanna be my valentines hehehee</h1>
+        </div>
+        <div class = "buttons">
+            <button class="btn" id = "yesButton" onclick = "nextPage()">HAO DEEEEEE!!</button>
+            <button class="btn" id = "noButton" onmouseover="moveButton()" onclick="moveButton()">BU YAOOOO</button>
+            <script>
+                function nextPage(){
+                    window.location.href = "yes.html";
+                }
+                function moveButton(){
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </body>
+</html>
