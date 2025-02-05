@@ -13,8 +13,18 @@ body{
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 0px;
+}
+
+.sub_text{
+    font-family: 'Nunito';
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
 }
 
 .gif_container {
