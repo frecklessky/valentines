@@ -4,14 +4,14 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f08080;
+    background-color: #FFD1DC;
 }
 
 .header_text{
     font-family: 'Nunito';
     font-size: 200px;
     font-weight: bold;
-    color: white;
+    color: #fc7384;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 0px;
@@ -21,7 +21,7 @@ body{
     font-family: 'Nunito';
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: #fc7384;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 40px;
