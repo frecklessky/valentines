@@ -4,6 +4,13 @@
         <link rel = "stylesheet" href="./styles.css">
     </head>
     <body>
+        <audio id="moveSound">
+            <source src="boing-sound.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="bgMusic" loop>
+            <source src="nintendo-music.mp3" type="audio/mpeg">
+        </audio>
         <div class = "gif_container">
             <img src = "https://i.pinimg.com/originals/c9/9c/51/c99c51fb08fde666e802e4f4be3eff5f.gif" alt="Cute animated illustration">
         </div>
@@ -16,10 +23,12 @@
             <button class="btn" id = "noButton" onmouseover="moveButton()" onclick="moveButton()">BU YAOOOO</button>
             <script>
                 let yesMoveCount = 0;
+                const moveSound = document.getElementById('moveSound');
                 function handleYes(){
                     if (yesMoveCount < 3){
                         yesMoveCount++;
                         moveYesButton();
+                        playMoveSound();
                     } else {
                         nextPage();
                     }
@@ -41,10 +50,23 @@
                     document.getElementById('noButton').style.left = `${x}px`;
                     document.getElementById('noButton').style.top = `${y}px`;
                 }
+
+                function playMoveSound() {
+                    moveSound.currentTime = 0;
+                    moveSound.play();
+                    moveSound.volume = 0.5;
+                }
+
+                const bgMusic = document.getElementById('bgMusic');
+                bgMusic.volume = 0.5; 
+
+                function playMusic() {
+                    bgMusic.play().catch((error) => {
+                        console.log("Autoplay blocked:", error);
+                    });
+                }
+                document.body.addEventListener('click', playMusic);
             </script>
         </div>
-        <audio autoplay loop>
-            <source src = "nintendo music.mp3" type = "audio/mpeg">
-        </audio>
     </body>
 </html>
